@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+ //Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+
+//IMPORTANTE: Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+
+int main()
+{
+    char string[50]; // declaração da string
+    int cont =0; // contador para quantidade de A/a
+
+    printf("Insira a string:\n");
+    scanf("%[^\n]%*c",string); //leitura da string
+
+     for (int i=0; string[i] != '\0'; i++){ //passa por cada ponto da string ate seu fim
+
+         if(string[i]=='a'||string[i]=='A') { //verifica se existe A/a na string
+                cont=cont+1;
+                printf("A string possui letra A/a na posição %i\n",i);
+         }
+
+     }
+
+        printf("A string possui a letra A/a %i vezes",cont); // mostra ao usuario quantos A/a existe na string
+
+    return 0;
+}
